@@ -1,8 +1,3 @@
-# -*- coding:utf-8 -*-
-"""
-作者：毕宸浩
-日期：2024年09月08日
-"""
 import torch
 import os
 import networkx as nx
