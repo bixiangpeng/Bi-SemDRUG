@@ -4,14 +4,14 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
 
 ## Contents
 
-* [Architecture](#Architecture)
+* [Architecture](#architecture)
 * [Requirements](#requirements)
    * [Download projects](#download-projects)
    * [Configure the environment manually](#configure-the-environment-manually)
 * [Usages](#usages)
    * [Data preparation](#data-preparation)
    * [Training](#training)
-   * [Pretrained models](#pretrained-models)
+   * [Reproducibility of results](#reproducibility-of-results)
 * [Contact](#contact)
 
 ## Architecture
