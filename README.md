@@ -59,7 +59,7 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
 
    ```
   
-  Here is the detailed introduction of the optional parameters when running `main_training.py`:
+  Here is the detailed introduction of the optional parameters when running `main.py`:
    ```text
     --datasetname: The dataset name, specifying the dataset used for model training.
     --ddi_types: The number of interaction types between drugs in the dataset..
