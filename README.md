@@ -40,7 +40,7 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
 * ### Data preparation
   There are three benchmark datasets were adopted in this project, including `DrugBank`, `TwoSides`, and `DeepDDI`.
 
-  🌳 The processed data can be downloaded through [this link](https://pan.baidu.com/s/1BAeE5P5mFJSAK02P5f223g?pwd=8aym).
+  🌳 The processed data can be downloaded through [link1](https://pan.baidu.com/s/1BAeE5P5mFJSAK02P5f223g?pwd=8aym) and [link2](https://pan.baidu.com/s/1XLWvZQATrfXagoX_7Ey7yg?pwd=vvb7).
   
   🌳 If you want to re-partition the subgraph, you can simply execute `python data/subgraph_partitioning.py `.
 
@@ -48,23 +48,24 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
 * ### Training
   You can retrain the model from scratch with the following command:
   ```text
-  For `DIP S. cerevisiae` dataset:
-    python main_training.py --datasetname DIP_S.cerevisiae --super_ratio 0.2 --layers 8 --hidden_dim 64
+  For `DrugBank` dataset:
+    python main.py --dataset DrugBank --ddi_types 86 --rst_file ./model_pkl/DrugBank/ --folds 3 --epochs 200 --hidden_dim 128 --hyper_num 4 
 
-  For `STRING H. sapiens` dataset:
-    python main_training.py --datasetname STRING_H.sapiens --super_ratio 0.2 --layers 8 --hidden_dim 64
+  For `TwoSides` dataset:
+    python main.py --dataset TwoSides --ddi_types 963 --rst_file ./model_pkl/TwoSides/ --folds 3 --epochs 200 --hidden_dim 128 --hyper_num 4 
 
-  For `STRING S. cerevisiae` dataset:
-    python main_training.py --datasetname STRING_S.cerevisiae --super_ratio 0.2 --layers 8 --hidden_dim 64
+  For `DeepDDI` dataset:
+    python main.py --dataset DeepDDI --ddi_types 2 --rst_file ./model_pkl/DeepDDI/ --folds 3 --epochs 200 --hidden_dim 128 --hyper_num 4 
 
    ```
   
   Here is the detailed introduction of the optional parameters when running `main_training.py`:
    ```text
     --datasetname: The dataset name, specifying the dataset used for model training.
+    --ddi_types: The number of interaction types between drugs in the dataset..
     --hidden_dim: The dimension of node embedding in hierarchical knowledge graph.
-    --layers: The hop of HetSemGNN in semantic encoder.
-    --super_ratio: The ratio of super-node used to generate graph context vector.
+    --hyper_num: The number of hyperedges learned in the HHGNN network.
+    --rst_file: The storage location of the model checkpoint file..
     --device_id: The device, specifying the GPU device number used for training.
     --batch_size: The batch size, specifying the number of samples in each training batch.
     --epochs: The number of epochs, specifying the number of iterations for training the model on the entire dataset.
