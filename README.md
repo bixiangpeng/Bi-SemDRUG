@@ -40,26 +40,9 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
 * ### Data preparation
   There are three benchmark datasets were adopted in this project, including `DrugBank`, `TwoSides`, and `DeepDDI`.
 
-  🌳 To facilitate understanding, the following is an explanation of the `data` file directory:
-    ```text
-       >  data
-          ├── Annotation_KG               - A folder for annotation knowledge graph data.           
-          │   ├── BP_subgraph.pkl             - A file for BP(Biological Process) knowledge subgraph.
-          │   ├── MF_subgraph.pkl             - A file for MF(Molecular Function) knowledge subgraph.
-          │   └── CC_subgraph.pkl             - A file for CC(Cellular Component) knowledge subgraph.
-          ├── DIP_S.cerevisiae            - A folder for DIP S. cerevisiae dataset.
-          │   ├── train.tsv                   - A TSV file for training dataset. 
-          │   ├── test.tsv                    - A TSV file for test dataset. 
-          │   ├── Interaction_KG              - A folder for interaction knowledge graph data.
-          │       ├── IKG_edge.pkl                - A pkl file recording the edges in interaction knowledge graph.
-          │       ├── edge_index_map_dict.pkl     - A pkl file recording the index of interaction edges in interaction knowledge graph.
-          │       ├── index_map_dict.pkl          - A pkl file recording the index of protein nodes in interaction knowledge graph.
-          │       ├── annotation_index_map.pkl    
-          │       └── annotation_batch.pkl        
-          ├── STRING_H.sapiens            - A folder for STRING H. sapiens dataset.
-          └── STRING_S.cerevisiae         - A folder for STRING S. cerevisiae dataset.
-
-   ```
+  🌳 The processed data can be downloaded through [this link](https://pan.baidu.com/s/1BAeE5P5mFJSAK02P5f223g?pwd=8aym).
+  
+  🌳 If you want to re-partition the subgraph, you can simply execute `python data/subgraph_partitioning.py `.
 
 
 * ### Training
