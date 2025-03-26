@@ -72,6 +72,14 @@ A repo for "Subgraph-focused Biomedical Knowledge Embedding with Bi-semantic Enc
     --lr: The learning rate, controlling the rate at which model parameters are updated.
     --num_workers: This parameter is an optional value in the Dataloader, and when its value is greater than 0, it enables multiprocessing for data processing.
    ```
+* ### Reproducibility of results
+ To reproduce the optimal results of the model, please download the model checkpoint file from the provided [link](https://pan.baidu.com/s/1IfZux7f4Zc9O7HTn3956LA?pwd=8i8a) and save it in the model_pkl directory. 
+ 
+ Then, you can execute the following command to obtain the model's optimal results.
+  ```text
+  python inference.py --dataset DrugBank
+   ```
+
 
 ## Contact
 
